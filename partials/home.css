@@ -1,0 +1,164 @@
+/*=============== HOME ===============*/
+.home{
+    background-color: #600000;
+    background-image: linear-gradient(135deg, #600000 5%, #b53d00 100%);
+
+    padding-bottom: 0;
+}
+
+.home__container {
+    padding-top: 4rem;
+    row-gap: 3.5rem;
+}
+
+.home__title,.home__value-number {
+    color: #fff;
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    line-height: 120%;
+    margin-bottom: 1.25rem;
+}
+
+.home__description {
+    color: var(--text-color-light);
+    margin-bottom: 2rem;
+}
+
+.home__value{
+  display: flex;
+  column-gap: 2.5rem;
+}
+
+.home__value-number{
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+}
+
+.home__value-number span {
+  color: var(--second-color);
+}
+
+.home__value-description{
+  display: flex;
+  color: var(--text-color-light);
+  font-size: var(--smaller-font-size);
+}
+
+.home__images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.home__orbe{
+  width: 265px;
+  height: 284px;
+  background: linear-gradient(180deg,
+              hsl(0, 0%, 16%) 93%,
+              hsl(0, 0%, 67%) 100%);
+  border-radius: 135px 135px 0 0;
+}
+
+.home__img{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 125px 125px 12px 12px;
+  display: inline-flex;
+  align-items: flex-end;
+  bottom: -1.5rem;
+  box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 400px){
+  .home{
+    padding-bottom: 0;
+  }
+
+  .home__value{
+    column-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px){ 
+  .home__value{
+    column-gap: 1rem;
+  }
+
+  .home__img{
+    width: 220px;
+    height: 280px;
+  }
+
+  .home__orbe{
+    width: 240px;
+    height: 264px;
+  }
+}
+
+@media screen and (min-width: 767px){
+  .home__container{
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 2rem;
+  }
+
+  .home__orbe{
+    align-self: flex-end;
+  }
+
+  .home__data{
+    padding-bottom: 2rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1020px) {
+  .home{
+    padding-bottom: 0;
+  }
+
+  .home__container{
+    padding-top: 5rem;
+    column-gap: 2rem;
+  }
+
+  .home__container{
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 2rem;
+  }
+
+  .home__data{
+    padding-bottom: 4rem;
+  }
+
+  .home__title{
+    margin-bottom: 2rem;
+  }
+
+  .home__description,
+  .home__search{
+    margin-bottom: 3rem;
+  }
+
+  .home__value{
+    column-gap: 3.5rem;
+  }
+
+  .home__orbe{
+    width: 504px;
+    height: 611px;
+    border-radius: 256px 256px 0 0;
+  }
+
+  .home__img{
+    width: 472px;
+    height: 634px;
+    border-radius: 263px 236px 12px 12px;
+    bottom: -2.5rem;
+  }
+}
